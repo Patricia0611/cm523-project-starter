@@ -6,9 +6,10 @@ body {
     padding: 100px 150px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 200px 200px auto;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 150px 400px auto;
     gap: 10px;
+    background: black;
 }
 
 nav {
@@ -51,126 +52,60 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-h1 {
-    font-size: 35px;
-    font-weight: 700;
-    font-style: bold;
-    color: #FFFFE0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    grid-column: 1 / span 2;
-    grid-row: 3;
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
 h2 {
     font-size: 30px;
     font-weight: 700;
     font-style: bold;
-    color: #FFFFE0; 
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
-    letter-spacing: 0.05em;
+    color: #FFFFE0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    grid-column: 2 /span 2;
+    grid-row: 1;
+}
+
+.thorn {
+    position: relative;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: black;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: visible;
+}
+
+.object {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 700;
+    font-style: bold;
+    color: #FFFFE0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 h3 {
-    font-size: 20px;
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 30px;
     font-weight: 700;
     font-style: bold;
-    color: #CCCCFF; 
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
-    letter-spacing: 0.05em;
-    grid-column: 3;
-    grid-row: 3;
-    text-align: center;
-}
-
-p {
-    font-weight: 500;
-    font-style: normal;
-    font-size: 18px;
-    color: #FFFFE0; 
+    color: #FFFFE0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.05em;
-    padding: 20px 20px;
-    margin: 0 auto;
-}
-
-.module-container {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2; 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 200px); 
-    gap: 10px;
-    cursor: pointer;
-}
-
-.module1, .module2, .module3, .module4 {
-    padding: 10px;
-    margin: 10px;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 10px; 
-    width: 90%; 
-    height: auto; 
-}
-
-.header {
-    position: relative; 
-    padding-left: 15px; 
-    border-left: 4px solid #4B369D;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.header:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); 
-}
-
-.detail-container {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    padding: 15px;
-    margin: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    min-height: 400px; 
-    position: relative;
-}
-
-.detail-container .detail {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-.detail {
-    line-height: 1,6;
-    opacity: 0; 
-    visibility: hidden; 
-    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s; 
-}
-
-.detail.active {
-    display: block;
-    max-height: 100%; 
-    opacity: 1; 
-    visibility: visible; 
-    transition: opacity 0.5s ease-in-out, visibility 0s; 
-    background: rgba(0, 0, 0, 0.202);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); 
+    text-align: center;
+    padding: 5px auto;
 }
 
 .previous-step a {
@@ -227,4 +162,46 @@ p {
 .next-step:hover {
     background-color: #fbbce8;
     transform: scale(1.1);
+}
+
+
+.fragment {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: var(--color, #ffffff);
+    clip-path: polygon(
+        0% 0%, 
+        calc(30% + var(--rand1, 0%)) calc(20% + var(--rand2, 0%)), 
+        calc(80% + var(--rand3, 0%)) calc(50% + var(--rand4, 0%)), 
+        calc(20% + var(--rand5, 0%)) calc(80% + var(--rand6, 0%))
+    );
+    animation: shatter 1.5s ease forwards;
+    transform-origin: center;
+    opacity: 1;
+}
+
+@keyframes shatter {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(var(--x) * 300px), calc(var(--y) * 300px)) rotate(calc(var(--angle) * 720deg));
+        opacity: 0;
+    }
+}
+
+.thorn.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
