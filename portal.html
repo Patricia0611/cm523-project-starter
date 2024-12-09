@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PUT A TITLE IN HERE -->
+    <title>project portal</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="portal" content="project portal includes all the documentations for this project" />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <!-- <link rel="stylesheet" href="styles\normalize.css" /> -->
+    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <!-- LINK TO YOUR STYLES -->
+    <link rel="stylesheet" href="styles\portal.css" />
+    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="scripts\portal.js" defer></script>
+  </head>
+
+  <body>
+    <nav>
+        <ul>
+          <li><a href="welcome.html">Home</a></li>
+          <li><a href="objects1.html">Visualize Anxiety</a></li>
+          <li><a href="intro.html">About</a></li>
+        </ul>
+      </nav>
+  
+      <div class="background">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/BJGIhDv1BAQMgQxQ/scene.splinecode"></spline-viewer>
+      </div>
+
+      <h1>Project Portal</h1>
+
+      <div class="doc">
+      <h2><a href="https://docs.google.com/document/d/1v-b3tHiUvLTh8GX8q-NV4jtTn29yXPz32bOV9DCS7DM/edit?usp=sharing">Proposal</a></h2>
+      <h2><a href="https://docs.google.com/document/d/1Z-lx-XK4qe_RrgDLDcxOZHkqnQBhwAOUgJWORiNr6RQ/edit?usp=sharing">Wireframe</a></h2>
+      <h2><a href="https://docs.google.com/document/d/1XQrtPYpgACWS1vRTKpdkp-ijeB9sTJ1ZfshFRfQmSN0/edit?usp=sharing">Design Documentation</a></h2>
+      <h2><a href="https://docs.google.com/document/d/1Kw1tjBrFo84P1b3D0BRipgzG7-g7qU6jjSlZ2EDwKfY/edit?usp=sharing">User Report</a></h2>
+      </div>
+
+      <button class="previous-step"><a href="intro.html">Go back</a></button>
+  </body>

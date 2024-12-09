@@ -1,36 +1,3 @@
-// Wait for the DOM to be fully loaded before executing the script
-document.addEventListener('DOMContentLoaded', function () {
-    // Select all elements with the class 'header'
-    const headers = document.querySelectorAll('.header');
-
-    // Select all elements with the class 'detail'
-    const details = document.querySelectorAll('.detail');
-
-    // Loop through each header element and add a click event listener
-    headers.forEach(header => {
-        header.addEventListener('click', function () {
-            // Get the target detail's ID from the 'data-detail' attribute of the clicked header
-            //source: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
-            const targetDetailId = this.dataset.detail;
-
-            // Remove the 'active' class from all detail elements
-            //source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach; https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-            details.forEach(detail => {
-                detail.classList.remove('active');
-            });
-
-            // Find the target detail element by its ID
-            const targetDetail = document.getElementById(targetDetailId);
-            if (targetDetail) {
-                // Add the 'active' class to the target detail element
-                targetDetail.classList.add('active');
-            }
-        });
-    });
-});
-
-
-
 // Select the button element with the class "stop"
 const button = document.querySelector('.stop');
 
@@ -38,18 +5,19 @@ const button = document.querySelector('.stop');
 const backgroundDiv = document.querySelector('.background');
 
 // Define an array of background configurations
+
 const backgrounds = [
     {
         // Script source for the Spline Viewer module
         scriptSrc: "https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js",
         // URL of the 3D scene to load in the Spline Viewer
-        viewerUrl: "https://prod.spline.design/9BtprdUaUNvJTidV/scene.splinecode"
+        viewerUrl: "https://prod.spline.design/cii9i5h1dT7412Fm/scene.splinecode"
     },
     {
         // Script source for another version of the Spline Viewer module
         scriptSrc: "https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js",
         // URL of the second 3D scene to load in the Spline Viewer
-        viewerUrl: "https://prod.spline.design/kzdnOJwZSpiDbth1/scene.splinecode"
+        viewerUrl: "https://prod.spline.design/l30tkK-vivEDL0hw/scene.splinecode"
     }
 ];
 

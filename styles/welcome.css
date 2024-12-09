@@ -7,7 +7,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 100px 100px auto;
+    grid-template-rows: 100px 100px 100px auto;
     gap: 10px;
 }
 
@@ -40,7 +40,7 @@ nav li {
 nav a {
     color: white; 
     text-decoration: none; 
-    font-size: 14px; 
+    font-size: 25px; 
     padding: 5px 10px;
     border-radius: 5px; 
     transition: background-color 0.3s, color 0.3s;
@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     font-style: bold;
     color: #FFFFE0;
@@ -77,19 +77,6 @@ h1:first-of-type {
 h1:last-of-type {
     grid-column: 2;
     grid-row: 2;
-}
-
-.diamond {
-    grid-column: 2;
-    grid-row: 3;
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-.diamond spline-viewer {
-    width: 80%;
-    height: 400px;
 }
 
 .next-step a {
@@ -120,14 +107,36 @@ h1:last-of-type {
     transform: scale(1.1);
 }
 
-p {
+.stop {
+    grid-column: 2;
+    grid-row: 4;
+    place-self: center;
+    max-width: 300px;
+    color: white;
+    font-family: "Playfair", serif;
+    background-color: #4B369D;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
     font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.stop:hover {
+    background-color: #fbbce8;
+    transform: scale(1.1);
+}
+
+p {
+    font-size: 35px;
     font-weight: 700;
     font-style: bold;
     color: #FFFFE0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    grid-column: 3;
-    grid-row: 3;
-    align-self: center;
-    text-align: left;
+    grid-column: 2;
+    grid-row: 5;
+    text-align: center;
 }

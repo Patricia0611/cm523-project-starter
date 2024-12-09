@@ -22,14 +22,14 @@
     <nav>
         <ul>
           <li><a href="welcome.html">Home</a></li>
+          <li><a href="objects1.html">Visualize Anxiety</a></li>
           <li><a href="intro.html">About</a></li>
-          <li><a href="objects1.html">Objects</a></li>
         </ul>
       </nav>
     
     <div class="background">
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.41/build/spline-viewer.js"></script>
-        <spline-viewer url="https://prod.spline.design/nZtIyjlsJa4OxHG6/scene.splinecode"></spline-viewer>
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+      <spline-viewer url="https://prod.spline.design/m1967Ln5q1KteG1Q/scene.splinecode"></spline-viewer>
       </div>
 
     <p>Please close your eyes and imagine what your anxiety looks like...</p>
@@ -37,12 +37,24 @@
     <h3>Which of the following word best describes what your anxiety looks like?</h3>
 
     <div class="anxiety-type">
-    <button><a href="thorn.html">Thorn</button>
-    <button><a href="cage.html">Cage</button>
-    <button><a href="flow.html">Flow</button>
-    <button><a href="chaos.html">Chaos</button>
+      <input type="radio" id="thorn" name="anxiety" value="thorn">
+        <label for="thorn">Thorn</label>
+
+        <input type="radio" id="cage" name="anxiety" value="cage">
+        <label for="cage">Cage</label>
+
+        <input type="radio" id="flow" name="anxiety" value="flow">
+        <label for="flow">Flow</label>
+
+        <input type="radio" id="chaos" name="anxiety" value="chaos">
+        <label for="chaos">Chaos</label>
+
+        <input type="radio" id="burning" name="anxiety" value="burning">
+        <label for="burning">Burning</label>
     </div>
     
-    <button class="previous-step"><a href="intro.html">Previous Step</a></button>
+    <button id="ok-button">OK</button>
+
+    <button class="previous-step"><a href="welcome.html">Return to Homepage</a></button>
 
   </body>

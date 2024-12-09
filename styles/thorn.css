@@ -7,7 +7,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 150px 400px auto;
+    grid-template-rows: auto 400px auto;
     gap: 10px;
     background: black;
 }
@@ -41,7 +41,7 @@ nav li {
 nav a {
     color: white; 
     text-decoration: none; 
-    font-size: 14px; 
+    font-size: 25px; 
     padding: 5px 10px;
     border-radius: 5px; 
     transition: background-color 0.3s, color 0.3s;
@@ -52,14 +52,22 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-h2 {
+.container {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+}
+
+
+.container h2 {
     font-size: 30px;
     font-weight: 700;
     font-style: bold;
     color: #FFFFE0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    grid-column: 2 /span 2;
-    grid-row: 1;
+    text-align: center;
 }
 
 .thorn {
@@ -94,18 +102,6 @@ h2 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-h3 {
-    grid-column: 2;
-    grid-row: 3;
-    font-size: 30px;
-    font-weight: 700;
-    font-style: bold;
-    color: #FFFFE0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    padding: 5px auto;
 }
 
 .previous-step a {
@@ -165,6 +161,14 @@ h3 {
 }
 
 
+/**source: https://developer.mozilla.org/en-US/docs/Web/CSS/var**/
+/**polygon() defines a shape using a series of points. 
+The points are defined as percentages or lengths relative to the element's dimensions.**/
+/**source: https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path**/
+/**source: https://developer.mozilla.org/en-US/docs/Web/CSS/calc**/
+/**Each calc() dynamically calculates the position of a polygon point. 
+var(--rand1, 0%) adds randomness to the shape by using custom properties (--rand1, --rand2, etc.) that can be set dynamically in JavaScript.
+This creates irregular shapes that can vary for each element.**/
 .fragment {
     position: absolute;
     width: 80px;
@@ -181,6 +185,7 @@ h3 {
     opacity: 1;
 }
 
+/**Source: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations**/
 @keyframes shatter {
     0% {
         transform: scale(1);
