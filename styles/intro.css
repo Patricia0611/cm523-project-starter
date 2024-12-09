@@ -71,6 +71,7 @@ h1 {
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
+    padding: 0;
 }
 
 h2 {
@@ -99,7 +100,7 @@ h3 {
 p {
     font-weight: 500;
     font-style: normal;
-    font-size: 25px;
+    font-size: 22px;
     color: #FFFFE0; 
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.05em;
