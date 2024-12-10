@@ -23,7 +23,8 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="objects1.html">Visualize Anxiety</a></li>
-          <li><a href="intro.html">About</a></li>
+          <li><a href="intro.html">Background</a></li>
+          <li><a href="portal.html">Project Portal</a></li>
         </ul>
       </nav>
     
@@ -50,9 +51,23 @@
         <label for="chaos">Chaos</label>
 
         <input type="radio" id="burning" name="anxiety" value="burning">
-        <label for="burning">Burning</label>
+        <label for="burning">Burned</label>
     </div>
+
+    <div id="custom-alert" class="hidden">
+      <div class="alert-box">
+          <p>Please select an option before clicking OK.</p>
+          <button id="close-alert">OK</button>
+      </div>
+  </div>  
     
+  <div id="custom-alert" style="display: none;">
+    <div class="alert-box">
+      <p>Please select an option before clicking OK.</p>
+      <button id="close-alert">Close</button>
+    </div>
+  </div>
+
     <button id="ok-button">OK</button>
 
     <button class="previous-step"><a href="index.html">Return to Homepage</a></button>
