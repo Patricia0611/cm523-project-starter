@@ -221,8 +221,120 @@ This creates irregular shapes that can vary for each element.**/
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
     body {
-        background-color: red; /* 测试 */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
     }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        height: auto; 
+        padding: 0; 
+        background: linear-gradient(90deg, #4B369D, #fbbce8); 
+        width: 100%; 
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; 
+        gap: 5px; 
+        padding: 0;
+        margin: 0;
+        list-style: none; 
+    }
+
+    nav li {
+        margin: 0;
+        width: 100%; 
+    }
+
+    nav a {
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center; 
+        display: block; 
+        padding: 0; 
+        width: 100%; 
+    }
+
+    .container {
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        margin: 60px 0 0; 
+    }
+    
+    .container h2 {
+        font-size: 20px;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .thorn {
+        position: relative;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%; 
+        height: auto; 
+        margin: 100px 0 20px 0;
+        padding: 0;
+        background-color: black;
+    }
+    
+    .object {
+        width: 100%; 
+        height: auto; 
+        opacity: 1; 
+        visibility: visible; /
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    
+    
+    .message {
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        font-size: 16px; 
+        text-align: center;
+        color: #FFFFE0;
+        opacity: 1;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        margin: 100px 0 50px; 
+    }
+    
+    .next-step {
+        position: static;
+        display: inline-block;
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .previous-step {
+        display: none; 
+    }
+    
+    .fragment {
+        width: 60px;
+        height: 60px;
+    }
+    
 }

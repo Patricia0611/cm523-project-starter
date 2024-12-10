@@ -245,8 +245,112 @@ p {
     transform: translateX(-50%) scale(1.1);
 }
 
-@media screen and (max-width: 400px) {
+/* Narrow */
+@media (max-width: 768px) {
     body {
-        background-color: red; /* test */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
     }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        height: auto; 
+        padding: 0; 
+        background: linear-gradient(90deg, #4B369D, #fbbce8); 
+        width: 100%; 
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; 
+        gap: 5px; 
+        padding: 0;
+        margin: 0;
+        list-style: none; 
+    }
+
+    nav li {
+        margin: 0;
+        width: 100%; 
+    }
+
+    nav a {
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center; 
+        display: block; 
+        padding: 0; 
+        width: 100%; 
+    }
+    
+    h1 {
+        font-size: 18px;
+        text-align: center;
+        margin: 100px 0 20px; 
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 16px;
+        text-align: center;
+        margin: 0; 
+        padding: 0;
+        line-height: 1; 
+    }
+    
+    .module-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px;
+        gap: 0; 
+        width: 100%; 
+        justify-items: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .module1, .module2, .module3, .module4 {
+        padding: 5px; 
+        margin: 5px; 
+        align-items: center;
+        justify-content: center;
+        width: 100%; 
+        height: auto;
+    }
+    
+    .detail-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center; 
+        width: 100%;
+        height: auto; 
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.2; 
+        margin: 0; 
+    }
+    
+    .detail-container .detail {
+        width: 100%;
+        padding: 10px;
+        background: none;
+    }
+    
+    .next-step, .previous-step {
+        display: none;
+    }
+    
 }

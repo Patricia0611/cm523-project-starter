@@ -159,7 +159,7 @@ nav a:hover {
 }
 
 /* Narrow */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         padding: 20px;
         display: flex;
@@ -167,6 +167,7 @@ nav a:hover {
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+        background-color: black;
     }
 
     nav {
@@ -202,23 +203,13 @@ nav a:hover {
         padding: 0; 
         width: 100%; 
     }
-
-
-    h1 {
-        font-size: 24px;
-        margin: 20px 0;
-        text-align: center;
+    
+    .previous-step, .next-step {
+    display: none; 
     }
 
-    p {
+    .container p {
         font-size: 16px;
-        margin: 15px 0;
-        text-align: center;
-    }
-
-    .next-step, .stop {
-        font-size: 14px;
-        padding: 10px 15px;
-        margin: 10px 0;
     }
 }
+
