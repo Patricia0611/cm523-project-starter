@@ -128,3 +128,9 @@ h1 {
     background-color: #fbbce8;
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+    body {
+        background-color: red; 
+    }
+}

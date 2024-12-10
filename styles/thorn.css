@@ -221,7 +221,7 @@ This creates irregular shapes that can vary for each element.**/
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 400px) {
     body {
         background-color: red; /* 测试 */
     }

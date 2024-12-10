@@ -256,3 +256,9 @@ p {
     background-color: #fbbce8;
     transform: translateX(-50%) scale(1.1);
 }
+
+@media screen and (max-width: 400px) {
+    body {
+        background-color: red; /* 测试 */
+    }
+}
